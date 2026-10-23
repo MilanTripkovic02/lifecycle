@@ -25,7 +25,7 @@
 #include <vector>
 
 #include "tests/integration/sandbox_options/verify_sandbox.hpp"
-#include "tests/utils/test_helper/test_helper.hpp"
+#include "tests/utils/test_helper/test_runner.hpp"
 
 namespace
 {
@@ -336,5 +336,6 @@ int main(int argc, char** argv)
     // and sandbox_options_process_b) write distinct result files. Dereference rather than index to
     // avoid the no-pointer-arithmetic lint rule.
     const char* const executable_path = (argc > 0) ? *argv : __FILE__;
-    return TestRunner(executable_path, TerminationBehavior::kContinue).RunTests();
+    TestRunner::Init(executable_path);
+    return TestRunner::RunTests();
 }
