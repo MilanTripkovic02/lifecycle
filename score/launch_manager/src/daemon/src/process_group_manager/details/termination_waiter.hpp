@@ -15,6 +15,8 @@
 #define _INCLUDED_TERMINATION_WAITER_
 
 #include "score/concurrency/condition_variable.h"
+#include <score/stop_token.hpp>
+#include <chrono>
 #include <condition_variable>
 #include <mutex>
 

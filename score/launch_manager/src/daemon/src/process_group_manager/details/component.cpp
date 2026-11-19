@@ -12,7 +12,16 @@
  ********************************************************************************/
 
 #include "score/mw/launch_manager/process_group_manager/details/component.hpp"
+#include "score/mw/launch_manager/common/identifier_hash.hpp"
 #include "score/mw/launch_manager/common/log.hpp"
+#include "score/mw/launch_manager/configuration/environment_config.hpp"
+#include "score/result/result.h"
+#include <score/assert.hpp>
+#include <errno.h>
+#include <time.h>
+#include <optional>
+#include <string>
+#include <utility>
 
 namespace score::mw::lifecycle::internal
 {

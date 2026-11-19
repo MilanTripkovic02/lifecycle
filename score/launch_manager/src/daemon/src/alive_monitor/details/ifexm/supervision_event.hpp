@@ -14,7 +14,7 @@
 #ifndef SUPERVISION_EVENT_HPP_INCLUDED
 #define SUPERVISION_EVENT_HPP_INCLUDED
 
-#include "score/mw/launch_manager/alive_monitor/details/ipc/ringbuffer.hpp"
+#include "score/mw/launch_manager/alive_monitor/details/ipc/ringbuffer.hpp"  // IWYU pragma: export
 #include "score/mw/launch_manager/common/identifier_hash.hpp"
 #include <cstdint>
 #include <ctime>
