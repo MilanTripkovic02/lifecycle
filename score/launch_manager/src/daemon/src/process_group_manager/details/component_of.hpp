@@ -14,7 +14,7 @@
 #define SCORE_LCM_COMPONENT_OF_HPP_INCLUDED
 
 #include "score/mw/launch_manager/process_group_manager/details/icomponent.hpp"
-#include "score/mw/launch_manager/process_group_manager/details/process_info_node.hpp"
+#include "score/mw/launch_manager/process_group_manager/details/process/process_info_node.hpp"
 #include "score/mw/launch_manager/process_group_manager/details/run_target.hpp"
 
 #include <variant>

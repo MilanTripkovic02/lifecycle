@@ -65,39 +65,3 @@ lm_cc_test(
         "@googletest//:gtest_main",
     ],
 )
-
-cc_library(
-    name = "process_start_action",
-    srcs = ["process_start_action.cpp"],
-    hdrs = ["process_start_action.hpp"],
-    include_prefix = "score/mw/launch_manager/process_group_manager/details/start_action",
-    strip_include_prefix = "/score/launch_manager/src/daemon/src/process_group_manager/details/start_action",
-    visibility = ["//score/launch_manager/src/daemon/src/process_group_manager:__subpackages__"],
-    deps = [
-        ":istart_action",
-        "//score/launch_manager:error",
-        "//score/launch_manager/src/daemon/src/common:log",
-        "//score/launch_manager/src/daemon/src/configuration:component_config",
-        "//score/launch_manager/src/daemon/src/osal:ipc_comms",
-        "//score/launch_manager/src/daemon/src/osal:return_types",
-        "//score/launch_manager/src/daemon/src/process_group_manager:iprocess",
-        "//score/launch_manager/src/daemon/src/process_group_manager/details:handle",
-        "//score/launch_manager/src/daemon/src/process_group_manager/details:icomponent",
-        "//score/launch_manager/src/daemon/src/process_group_manager/details:safe_process_map",
-        "@score_baselibs//score/language/futurecpp",
-        "@score_baselibs//score/result",
-    ],
-)
-
-lm_cc_test(
-    name = "process_start_action_UT",
-    srcs = ["process_start_action_UT.cpp"],
-    deps = [
-        ":process_start_action",
-        "//score/launch_manager:error",
-        "//score/launch_manager/src/daemon/src/process_group_manager:mock_iprocess",
-        "//score/launch_manager/src/daemon/src/process_group_manager/details:mock_component",
-        "//score/launch_manager/src/daemon/src/process_group_manager/details:mock_safe_process_map_inserter",
-        "@googletest//:gtest_main",
-    ],
-)
